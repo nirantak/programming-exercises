@@ -1,4 +1,4 @@
-% Equalize histogram for grayscale image
+% Equalize histogram for greyscale image
 clc;
 img = imread('images/binary_bw.jpg');
 img = im2bw(img);
