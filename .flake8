@@ -6,5 +6,5 @@ exclude =
 	.git,
 	*migrations*,
 	__pycache__,
-	manage.py,
+	.vscode,
 	*node_modules*

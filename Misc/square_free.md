@@ -1,5 +1,7 @@
 # Square Free Numbers
 
+## Program: [square_free.py](https://github.com/nirantak/Programming_Exercises/blob/master/Misc/square_free.py)
+
 ## Problem Description
 
 In the theory of numbers, square free numbers have a special place. A square free number is one that is not divisible by a perfect square (other than 1). Thus 72 is divisible by 36 (a perfect square), and is not a square free number, but 70 has factors 1, 2, 5, 7, 10, 14, 35 and 70. As none of these are perfect squares (other than 1), 70 is a square free number.

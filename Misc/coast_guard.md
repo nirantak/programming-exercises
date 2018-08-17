@@ -1,5 +1,7 @@
 # Coast Guard Problem
 
+## Program: [coast_guard.py](https://github.com/nirantak/Programming_Exercises/blob/master/Misc/coast_guard.py)
+
 ## Problem Description
 
 Of late, smuggling has increased many fold and as Chief of the Coast Guard, you are responsible for intercepting the smuggling vessels and nullify them. You have stationed several smart, high speed boats in the sea. The entire sea under your control can be divided into a rectangular grid of 1 km by 1 km squares. Due to a design flaw in the boats, they can move only in horizontal or vertical directions (EW or NS) (they cannot move diagonally, in particular). Of course, no two boats are stationed in the same grid square.
