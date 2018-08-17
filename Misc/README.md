@@ -1,5 +1,7 @@
 # Miscellaneous Coding Problems
 
+## Index
+
 1. Coast Guard Problem
 	* [Question](https://github.com/nirantak/Programming_Exercises/blob/master/Misc/coast_guard.md)
 	* [Solution](https://github.com/nirantak/Programming_Exercises/blob/master/Misc/coast_guard.py)

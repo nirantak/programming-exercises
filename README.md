@@ -1,6 +1,6 @@
 # Programming Exercises
 
-Miscellaneous programming exercises for my college courses.
+Various programming exercises for my college courses.
 
 ## Index
 
