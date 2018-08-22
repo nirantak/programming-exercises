@@ -16,8 +16,7 @@ def factors(num: int) -> List[int]:
     return list(result)
 
 
-def main(data: str) -> int:
-    num = int(data.strip())
+def main(num: int) -> int:
     count = 0
 
     fact = factors(num)
@@ -33,6 +32,6 @@ def main(data: str) -> int:
 
 
 if __name__ == "__main__":
-    data = input()
-    result = main(data)
-    print(result, end="")
+    num = int(input("Enter a number: "))
+    result = main(num)
+    print(f"Number of square free factors: {result}")

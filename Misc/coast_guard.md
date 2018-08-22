@@ -35,8 +35,7 @@ A single line containing the number of uncontrolled grid squares.
 #### Input 1
 
 3,4,2  
-2,0  
-0,2
+2 0 , 0 2
 
 #### Output 1
 
@@ -53,8 +52,7 @@ The position is the same as in the earlier figure. There are 4 uncontrolled squa
 #### Input 2
 
 2,4,2  
-0,1  
-2,0
+0 1 , 2 0
 
 #### Output 2
 

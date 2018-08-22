@@ -35,13 +35,11 @@ Each consists of an integer specifying the prime at the corresponding position.
 #### Input 1
 
 2  
-1,0  
-0,1
+1 0 , 0 1
 
 #### Output 1
 
-3  
-7
+3 , 7
 
 #### Explanation 1
 
@@ -52,15 +50,11 @@ N=2. There are 2 sets of coordinates in this test case. The coordinates are (1,0
 #### Input 2
 
 3  
-1,1  
--1,1  
--1,0
+1 1 , -1 1 , -1 0
 
 #### Output 2
 
-5  
-11  
-13
+5 , 11 , 13
 
 #### Explanation 2
 

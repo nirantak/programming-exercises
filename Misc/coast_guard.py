@@ -1,17 +1,15 @@
 """
 Coast Guard Problem, refer coast_guard.md for the question.
 """
+from typing import Dict, List
 
 
-def main(data: str) -> int:
-    rows, cols, num_boats = [int(i.strip()) for i in data.split(",")]
-    boat_positions = []
+def main(rows: int, cols: int, num_boats: int, boat_positions: List[Dict]) -> int:
     uncontrolled_squares = 0
 
-    for i in range(num_boats):
-        coordinates = input()
-        y, x = [int(i.strip()) for i in coordinates.split(",")]
-        boat_positions.append({"x": x, "y": y})
+    if len(boat_positions) != num_boats:
+        print("Invalid Input")
+        return -1
 
     for i in range(rows):
         for j in range(cols):
@@ -25,6 +23,14 @@ def main(data: str) -> int:
 
 
 if __name__ == "__main__":
-    data = input()
-    result = main(data)
-    print(result, end="")
+    data = input("Enter number of Rows, Columns, and Boats: ")
+    coordinates = input("Enter boat coordinates separated by a comma: ")
+
+    rows, cols, num_boats = [int(i.strip()) for i in data.split(",")]
+    boat_positions = []
+    for i in coordinates.split(","):
+        y, x = i.split()
+        boat_positions.append({"x": int(x), "y": int(y)})
+
+    result = main(rows, cols, num_boats, boat_positions)
+    print(f"Number of Uncontrolled Squares: {result}")

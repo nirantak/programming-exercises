@@ -3,7 +3,7 @@ Spiral Primes, refer spiral_primes.md for the question.
 """
 
 from itertools import cycle
-from typing import Tuple
+from typing import List, Tuple
 
 
 def gen_primes() -> int:
@@ -56,24 +56,32 @@ def down(x: int, y: int) -> Tuple[int, int]:
     return x, y - 1
 
 
-def main(data: str):
-    n = int(data)
-    coordinates = []
-    for i in range(n):
-        location = input()
-        x, y = [int(i.strip()) for i in location.split(",")]
-        coordinates.append((x, y))
+def main(n: int, coordinates: List[Tuple]) -> List[int]:
+    result = []
+    if len(coordinates) != n:
+        print("Invalid Input")
+        return None
 
     spiral = gen_spiral()
 
     while n > 0:
         prime, location = next(spiral)
         if location in coordinates:
-            print(prime)
+            result.append(prime)
             n -= 1
             coordinates.remove(location)
 
+    return result
+
 
 if __name__ == "__main__":
-    data = input()
-    main(data)
+    n = int(input("Enter number of co-ordinates: "))
+    data = input("Enter list of coordinates separated by a comma: ")
+
+    coordinates = []
+    for i in data.split(","):
+        x, y = i.split()
+        coordinates.append((int(x), int(y)))
+
+    result = main(n, coordinates)
+    print(f"Primes: {result}")
