@@ -1,7 +1,7 @@
 import square_free
 
 
-class TestSpiralPrimes:
+class TestSquareFree:
     def test_one(self):
         assert square_free.main(20) == 3
 
