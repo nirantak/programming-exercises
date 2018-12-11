@@ -1,10 +1,13 @@
 [flake8]
 
+count = True
 max-line-length = 88
+statistics = True
+verbose = 1
 
 exclude =
 	.git,
 	*migrations*,
 	__pycache__,
-	.vscode,
-	*node_modules*
+	manage.py,
+	node_modules,
