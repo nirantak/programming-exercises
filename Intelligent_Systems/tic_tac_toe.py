@@ -122,17 +122,13 @@ class GUI:
         self.buttons = {}
         self.reset_btn = None
         for x, y in self.board.fields:
-            handler = lambda x=x, y=y: self.move(x, y)
-            button = Button(
-                self.app, command=handler, font=self.font, width=2, height=1
-            )
+            handler = lambda x=x, y=y: self.move(x, y)  # noqa
+            button = Button(self.app, command=handler, font=self.font, width=2, height=1)
             button.grid(row=y, column=x)
             self.buttons[x, y] = button
-        handler = lambda: self.reset()
+        handler = lambda: self.reset()  # noqa
         button = Button(self.app, text="Reset", command=handler)
-        button.grid(
-            row=self.board.size + 1, column=0, columnspan=self.board.size, sticky="WE"
-        )
+        button.grid(row=self.board.size + 1, column=0, columnspan=self.board.size, sticky="WE")
         self.reset_btn = button
         self.update()
 
