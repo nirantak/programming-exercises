@@ -4,15 +4,13 @@
 
 ## Problem Description
 
-There are N number of Light towers (L1...LN) with height (Hi). Amount of area lighted by a tower of height Hi is shown in the image.
-
-Total Area for this case is Hi2. These towers are placed on a long road. You need to find the total amount of area has light.
+There are N number of Light towers (L1...LN) with height (Hi). Amount of area lighted by a tower of height Hi is Hi^2. These towers are placed on a long road. You need to find the total amount of area has light.
 
 ## Constraints
 
-1 <= T <= 100
-1 <= N <= 1000
-0<= P <= 1000
+1 <= T <= 100  
+1 <= N <= 1000  
+0<= P <= 1000  
 1<= H <= 1000
 
 ## Input Format
@@ -30,8 +28,8 @@ T double values in T lines represent the area for each test case.
 
 #### Input 1
 
-1
-1
+1  
+1  
 10 2
 
 #### Output 1
@@ -42,16 +40,16 @@ T double values in T lines represent the area for each test case.
 
 #### Input 2
 
-2
-3
-4 8
-6 2
-12 3
-2
-5 4
+2  
+3  
+4 8  
+6 2  
+12 3  
+2  
+5 4  
 7 4
 
 #### Output 2
 
-70.75
+70.75  
 23.0
