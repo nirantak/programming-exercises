@@ -5,17 +5,17 @@ include = '\.pyi?$'
 exclude = '''
 /(
     \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | \.vscode
-  | _build
-  | .*migrations.*
-  | __pycache__
-  | buck-out
-  | build
-  | dist
-  | node_modules
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | \.vscode
+    | _build
+    | .*migrations.*
+    | __pycache__
+    | buck-out
+    | build
+    | dist
+    | node_modules
 )/
 '''
