@@ -5,7 +5,7 @@ Activation Functions for Artificial Neural Networks
 import math
 
 
-def binary_step(n: float):
+def binary_step(n: float) -> int:
     """
     Binary Step (Unipolar Binary) Activation Function
     """
@@ -14,7 +14,7 @@ def binary_step(n: float):
     return 0
 
 
-def bipolar_step(n: float):
+def bipolar_step(n: float) -> int:
     """
     Bipolar Step (Bipolar Binary) Activation Function
     """
@@ -23,14 +23,14 @@ def bipolar_step(n: float):
     return -1
 
 
-def binary_sigmoid(n: float, lmbda: float = 1.0):
+def binary_sigmoid(n: float, lmbda: float = 1.0) -> float:
     """
     Binary Sigmoidal (Unipolar Continuous) Activation Function
     """
     return 1 / (1 + (math.exp(-lmbda * n)))
 
 
-def bipolar_sigmoid(n: float, lmbda: float = 1.0):
+def bipolar_sigmoid(n: float, lmbda: float = 1.0) -> float:
     """
     Bipolar Sigmoidal (Bipolar Continuous) Activation Function
     """

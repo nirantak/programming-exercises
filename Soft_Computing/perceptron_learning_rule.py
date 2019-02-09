@@ -1,33 +1,25 @@
 """
-Implementation of Hebb Learning Rule.
-Delta W = C * Oi * Xi
+Implementation of Perceptron Learning Rule.
+Delta W = C * (Di - Oi) * Xi
 New Weight = Old Weight + Delta W
 """
-from textwrap import dedent
-
 import numpy as np
 
-from .activation_functions import bipolar_sigmoid, bipolar_step
-from .learning_rules import hebb
+from .activation_functions import bipolar_step
+from .learning_rules import perceptron
 
 
-def main(x: np.array, weight: np.array, fn: int):
+def main(x: np.array, weight: np.array, const: float, d: np.array) -> np.array:
     print(f"\nWeight 1: {weight}")
 
     for i, xi in enumerate(x):
         net = np.matmul(weight, xi)
         print(f"Net {i+1}: {net}")
 
-        if fn == 1:
-            out = bipolar_step(net)
-        elif fn == 2:
-            out = bipolar_sigmoid(net)
-        else:
-            return None
-
+        out = bipolar_step(net)
         print(f"Out {i+1}: {out}")
 
-        weight += hebb(out, xi)
+        weight += perceptron(d[i], out, xi, const)
         print(f"\nWeight {i + 2}: {weight}")
 
     return weight
@@ -35,6 +27,7 @@ def main(x: np.array, weight: np.array, fn: int):
 
 if __name__ == "__main__":
     n = int(input("Enter number of 1D input vectors: "))
+    const = float(input("Enter value of constant: "))
 
     if n > 1:
         x = np.array(
@@ -48,21 +41,15 @@ if __name__ == "__main__":
             )
             x = np.vstack((x, xi))
 
+        d = np.array(
+            [float(j) for j in input(f"Enter values for desired output di: ").split()],
+            dtype=np.float,
+        )  # di vector
+
         w = np.array([float(j) for j in input(f"Enter initial weights: ").split()], dtype=np.float)
         if len(w) != ln:
             print("... Using default weights")
             w = np.zeros(ln)
 
-        fn = int(
-            input(
-                dedent(
-                    """
-                    1> Bipolar Step
-                    2> Bipolar Sigmoidal
-                    Choose activation function: """
-                )
-            )
-        )
-
-        w = main(x, w, fn)
+        w = main(x, w, const, d)
         print(f"\nFinal weights are: {w}")
