@@ -227,7 +227,7 @@ def print_solution(solution):
 
     for t in range(len(path)):
         state = path[len(path) - t - 1]
-        if t is 0:
+        if t == 0:
             direction = "--0--"
         elif state.boat == "left":
             direction = "<---L"

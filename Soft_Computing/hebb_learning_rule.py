@@ -7,7 +7,7 @@ from textwrap import dedent
 
 import numpy as np
 
-from .utils import activate_bipolar_sigmoid, activate_bipolar_step
+from .activation_functions import bipolar_sigmoid, bipolar_step
 
 
 def main(x: np.array, weight: np.array, fn: int):
@@ -19,9 +19,9 @@ def main(x: np.array, weight: np.array, fn: int):
         print(f"Net {i+1}: {net}")
 
         if fn == 1:
-            out = activate_bipolar_step(net)
+            out = bipolar_step(net)
         elif fn == 2:
-            out = activate_bipolar_sigmoid(net)
+            out = bipolar_sigmoid(net)
         else:
             return None
 

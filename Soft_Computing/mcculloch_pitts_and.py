@@ -3,7 +3,7 @@ Neural Network to implement AND gate using McCulloch-Pitts Neuron Model.
 """
 import numpy as np
 
-from .utils import neuron
+from .neurons import neuron
 
 
 def main():

@@ -1,7 +1,6 @@
 """
-Reusable utility functions
+Neurons for Artificial Neural Networks
 """
-import math
 from typing import Dict, List, Tuple
 
 import numpy as np
@@ -36,39 +35,3 @@ def neuron(
         return (True, anet[0], data)
     else:
         return (False, 0, data)
-
-
-def activate_binary_step(n: float):
-    """
-    Binary Step (Unipolar Binary) Activation Function
-    """
-    if n > 0:
-        return 1
-    else:
-        return 0
-
-
-def activate_bipolar_step(n: float):
-    """
-    Bipolar Step (Bipolar Binary) Activation Function
-    """
-    if n > 0:
-        return 1
-    else:
-        return -1
-
-
-def activate_binary_sigmoid(n: float):
-    """
-    Binary Sigmoidal (Unipolar Continuous) Activation Function
-    """
-    lmbda = 1
-    return 1 / (1 + (math.e ** (-lmbda * n)))
-
-
-def activate_bipolar_sigmoid(n: float):
-    """
-    Bipolar Sigmoidal (Bipolar Continuous) Activation Function
-    """
-    lmbda = 1
-    return (2 / (1 + (math.e ** (-lmbda * n)))) - 1

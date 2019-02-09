@@ -31,7 +31,7 @@ if __name__ == "__main__":
     bi = np.array([1, 1, 1, 1])
 
     if len(sys.argv) < 2 or sys.argv[1] not in {"and", "or"}:
-        print("\nUsage: hebb_learning.py {and|or}")
+        print("\nUsage: hebb_learning_op.py {and|or}")
         sys.exit(1)
 
     if sys.argv[1] == "and":
