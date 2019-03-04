@@ -13,6 +13,7 @@
 5. [Generate weights for pattern recognition using Hebb Learning Rule](https://github.com/nirantak/Programming_Exercises/blob/master/Soft_Computing/hebb_pattern.py)
 6. [Perceptron Learning Rule](https://github.com/nirantak/Programming_Exercises/blob/master/Soft_Computing/perceptron_learning_rule.py)
 7. [Delta Learning Rule](https://github.com/nirantak/Programming_Exercises/blob/master/Soft_Computing/delta_learning_rule.py)
+8. [Backpropagation](https://github.com/nirantak/Programming_Exercises/blob/master/Soft_Computing/backpropagation.py)
 
 ### Algorithms
 
