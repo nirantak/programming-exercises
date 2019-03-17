@@ -5,21 +5,7 @@ import sys
 from textwrap import dedent
 from typing import List
 
-
-def max_min(a: List[List[float]], b: List[List[float]]):
-    zip_b = list(zip(*b))
-    return [
-        [max(min(ele_a, ele_b) for ele_a, ele_b in zip(row_a, col_b)) for col_b in zip_b]
-        for row_a in a
-    ]
-
-
-def max_product(a: List[List[float]], b: List[List[float]]):
-    zip_b = list(zip(*b))
-    return [
-        [round(max(ele_a * ele_b for ele_a, ele_b in zip(row_a, col_b)), 3) for col_b in zip_b]
-        for row_a in a
-    ]
+from .fuzzy_sets import max_min, max_product
 
 
 def get_output(x: List[List[float]]) -> str:
@@ -27,7 +13,7 @@ def get_output(x: List[List[float]]) -> str:
     return f"[{res}]"
 
 
-if __name__ == "__main__":
+def main():
     choices = ["Max-Min", "Max-Product"]
     choice = int(
         input(
@@ -71,3 +57,7 @@ if __name__ == "__main__":
 
     print(f"\nResult: {choices[choice-1]}")
     print(f"{get_output(result)}")
+
+
+if __name__ == "__main__":
+    main()
