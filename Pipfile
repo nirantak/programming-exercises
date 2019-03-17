@@ -12,6 +12,7 @@ lint = "flake8 --statistics --count"
 test = "pytest"
 
 [packages]
+jupyter = "*"
 matplotlib = "*"
 numpy = "*"
 pandas = "*"
