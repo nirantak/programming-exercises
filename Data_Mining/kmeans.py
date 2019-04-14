@@ -37,7 +37,9 @@ def main(data: List[int], m1: float, m2: float):
         if pm1 == m1 and pm2 == m2:
             break
 
-    print("Since new mean is equal to mean obtained in the last step, execution is stopped here.")
+    print(
+        "Since new mean is equal to mean obtained in the last step, execution is stopped here."
+    )
 
 
 if __name__ == "__main__":

@@ -10,9 +10,14 @@ import math
 Input = [float(x) for x in input("\nEnter Two Inputs [i1, i2]: ").split()]
 Bias = [float(x) for x in input("Enter Two Bias [b1, b2]: ").split()]
 Weights = [
-    float(x) for x in input("Enter Eight Weights [w1, w2, w3, w4, w5, w6, w7, w8]: ").split()
+    float(x)
+    for x in input(
+        "Enter Eight Weights [w1, w2, w3, w4, w5, w6, w7, w8]: "
+    ).split()
 ]
-Output = [float(x) for x in input("Enter Two Target Outputs [o1, o2]: ").split()]
+Output = [
+    float(x) for x in input("Enter Two Target Outputs [o1, o2]: ").split()
+]
 L_Val = float(input("Enter Lambda Value: "))
 L_Rate = float(input("Enter Learning Rate: "))
 
@@ -115,8 +120,12 @@ while Count <= 10000:
         )
 
     if ErrorT != 0.000:
-        W1 = Obackward_pass([O1[1], O2[1]], Output, [H1[1], H2[1]], Weights[4:], L_Rate)
-        W2 = Hbackward_pass([O1[1], O2[1]], Output, [H1[1], H2[1]], Input, Weights, L_Rate)
+        W1 = Obackward_pass(
+            [O1[1], O2[1]], Output, [H1[1], H2[1]], Weights[4:], L_Rate
+        )
+        W2 = Hbackward_pass(
+            [O1[1], O2[1]], Output, [H1[1], H2[1]], Input, Weights, L_Rate
+        )
         Weights = []
         Weights = W2 + W1
         if Count == 1:

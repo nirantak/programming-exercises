@@ -41,7 +41,13 @@ def main(choice: int, set1: Dict[str, int], set2: Dict[str, int] = None):
 
 
 if __name__ == "__main__":
-    choices = ["Union", "Intersection", "Complement", "Difference", "Proof of DeMorgan's Law"]
+    choices = [
+        "Union",
+        "Intersection",
+        "Complement",
+        "Difference",
+        "Proof of DeMorgan's Law",
+    ]
     choice = int(
         input(
             dedent(

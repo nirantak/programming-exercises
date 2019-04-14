@@ -4,7 +4,9 @@ Solve the Missionary and Cannibal Problem as a State Space Search Problem.
 
 
 class State:
-    def __init__(self, cannibalLeft, missionaryLeft, boat, cannibalRight, missionaryRight):
+    def __init__(
+        self, cannibalLeft, missionaryLeft, boat, cannibalRight, missionaryRight
+    ):
         """
         Initialize new State object with given data
         """
@@ -33,8 +35,14 @@ class State:
             and self.missionaryRight >= 0
             and self.cannibalLeft >= 0
             and self.cannibalRight >= 0
-            and (self.missionaryLeft == 0 or self.missionaryLeft >= self.cannibalLeft)
-            and (self.missionaryRight == 0 or self.missionaryRight >= self.cannibalRight)
+            and (
+                self.missionaryLeft == 0
+                or self.missionaryLeft >= self.cannibalLeft
+            )
+            and (
+                self.missionaryRight == 0
+                or self.missionaryRight >= self.cannibalRight
+            )
         ):
             return True
         else:
@@ -242,7 +250,9 @@ def print_solution(solution):
 def main():
     solution = breadth_first_search()
     print("Missionary and Cannibal solution: ")
-    print("Cannibal Left\tMissionary Left\tBoat\tCannibal Right\tMissionary Right")
+    print(
+        "Cannibal Left\tMissionary Left\tBoat\tCannibal Right\tMissionary Right"
+    )
     print_solution(solution)
 
 

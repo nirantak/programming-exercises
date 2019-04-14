@@ -32,7 +32,9 @@ def delta(Di: float, Oi: float, Xi: np.array, C: float = 1.0) -> np.array:
     return C * (Di - Oi) * f_ * Xi
 
 
-def widrow_hoff(Di: float, Wi: np.array, Xi: np.array, C: float = 1.0) -> np.array:
+def widrow_hoff(
+    Di: float, Wi: np.array, Xi: np.array, C: float = 1.0
+) -> np.array:
     """
     Widrow-Hoff Learning Rule (Least Mean Square) (Supervised)
     Delta W = C * r * Xi

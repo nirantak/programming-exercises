@@ -26,8 +26,12 @@ def main():
         )
     )
 
-    ma, na = [int(i) for i in input("Enter m n dimensions for relation1: ").split()]
-    mb, nb = [int(i) for i in input("Enter m n dimensions for relation2: ").split()]
+    ma, na = [
+        int(i) for i in input("Enter m n dimensions for relation1: ").split()
+    ]
+    mb, nb = [
+        int(i) for i in input("Enter m n dimensions for relation2: ").split()
+    ]
 
     a = []
     for i in input("\nEnter relation1 [[e11...e1n],[em1...emn]]: ").split(","):

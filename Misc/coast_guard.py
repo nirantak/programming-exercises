@@ -4,7 +4,9 @@ Coast Guard Problem, refer coast_guard.md for the question.
 from typing import Dict, List
 
 
-def main(rows: int, cols: int, num_boats: int, boat_positions: List[Dict]) -> int:
+def main(
+    rows: int, cols: int, num_boats: int, boat_positions: List[Dict]
+) -> int:
     uncontrolled_squares = 0
 
     if len(boat_positions) != num_boats:

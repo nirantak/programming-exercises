@@ -8,7 +8,8 @@ from typing import Any, Dict, List, Tuple
 
 
 def main(
-    problems: Dict[str, Dict[str, int]], submissions: List[Tuple[str, str, str, List[str]]]
+    problems: Dict[str, Dict[str, int]],
+    submissions: List[Tuple[str, str, str, List[str]]],
 ) -> List[Tuple[int, str, int, float]]:
 
     result: List[Tuple[int, str, int, float]] = []
@@ -36,10 +37,22 @@ def main(
             else:
                 user["partial"] += problems[pid]["s"] * a / problems[pid]["t"]
 
-        u_list.append((uid, user["full"], user["partial"], float(round(user["partial"], 2))))
+        u_list.append(
+            (
+                uid,
+                user["full"],
+                user["partial"],
+                float(round(user["partial"], 2)),
+            )
+        )
 
     for n, i in enumerate(
-        sorted(sorted(u_list, key=itemgetter(0)), key=itemgetter(1, 2), reverse=True), 1
+        sorted(
+            sorted(u_list, key=itemgetter(0)),
+            key=itemgetter(1, 2),
+            reverse=True,
+        ),
+        1,
     ):
         if i[1] == 0 and i[2] == 0:
             continue
@@ -61,7 +74,9 @@ if __name__ == "__main__":
         pid, s, t = input(f"{i+1}: ").split()
         problems[pid] = {"s": int(s), "t": int(t)}
 
-    u, su = input("Enter number of Finalists & total number of Submissions: ").split()
+    u, su = input(
+        "Enter number of Finalists & total number of Submissions: "
+    ).split()
 
     print(
         "For each submission, enter UserID, ProblemID, SubmissionID and StatusCode for each test case: "  # noqa

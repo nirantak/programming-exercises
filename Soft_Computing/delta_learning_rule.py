@@ -31,22 +31,33 @@ if __name__ == "__main__":
 
     if n > 1:
         x = np.array(
-            [float(j) for j in input(f"Enter elements in x1: ").split()], dtype=np.float
+            [float(j) for j in input(f"Enter elements in x1: ").split()],
+            dtype=np.float,
         )  # input vector
         ln = len(x)
 
         for i in range(n - 1):
             xi = np.array(
-                [float(j) for j in input(f"Enter elements in x{i+2}: ").split()], dtype=np.float
+                [
+                    float(j)
+                    for j in input(f"Enter elements in x{i+2}: ").split()
+                ],
+                dtype=np.float,
             )
             x = np.vstack((x, xi))
 
         d = np.array(
-            [float(j) for j in input(f"Enter values for desired output di: ").split()],
+            [
+                float(j)
+                for j in input(f"Enter values for desired output di: ").split()
+            ],
             dtype=np.float,
         )  # di vector
 
-        w = np.array([float(j) for j in input(f"Enter initial weights: ").split()], dtype=np.float)
+        w = np.array(
+            [float(j) for j in input(f"Enter initial weights: ").split()],
+            dtype=np.float,
+        )
         if len(w) != ln:
             print("... Using default weights")
             w = np.zeros(ln)

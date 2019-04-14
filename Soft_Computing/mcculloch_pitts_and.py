@@ -29,7 +29,9 @@ def main():
             print(f"\nThreshold Value: {res[1]}")
             break
         else:
-            print("\nYour Weights are Incorrect! No Net Value satisfies Threshold Constraints.")
+            print(
+                "\nYour Weights are Incorrect! No Net Value satisfies Threshold Constraints."
+            )
             print("\nEnter weights again...")
 
 

@@ -65,8 +65,12 @@ def main(dataset_path: str, X: Dict):
     pcx_yes = pxc_yes * pc_yes
     pcx_no = pxc_no * pc_no
     print("\nP(C\u1D62|X) = P(X|C\u1D62)*P(C\u1D62):")
-    print(f"\tP(X|buys_computer = 'yes') * P(buys_computer = 'yes') = {round(pcx_yes, 3)}")
-    print(f"\tP(X|buys_computer = 'no') * P(buys_computer = 'no') = {round(pcx_no, 3)}")
+    print(
+        f"\tP(X|buys_computer = 'yes') * P(buys_computer = 'yes') = {round(pcx_yes, 3)}"
+    )
+    print(
+        f"\tP(X|buys_computer = 'no') * P(buys_computer = 'no') = {round(pcx_no, 3)}"
+    )
 
     print(
         f"""

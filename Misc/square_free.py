@@ -9,7 +9,11 @@ from typing import List
 def factors(num: int) -> List[int]:
     """Find factors of a given input number"""
     result = set(
-        x for y in ([i, num // i] for i in range(2, int(num ** 0.5) + 1) if num % i == 0) for x in y
+        x
+        for y in (
+            [i, num // i] for i in range(2, int(num ** 0.5) + 1) if num % i == 0
+        )
+        for x in y
     )
     return list(result)
 

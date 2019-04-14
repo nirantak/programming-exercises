@@ -9,7 +9,9 @@ from typing import Tuple
 import numpy as np
 
 
-def main(x1: np.array, x2: np.array, bi: np.array, op: np.array) -> Tuple[int, int, int]:
+def main(
+    x1: np.array, x2: np.array, bi: np.array, op: np.array
+) -> Tuple[int, int, int]:
     const = 1
     w1 = w2 = bw = 0
     print(f"Initial weights:\n\tw1 = {w1}, w2 = {w2}, bw = {bw}")
