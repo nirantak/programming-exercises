@@ -1,0 +1,8 @@
+jupyter
+matplotlib
+numpy
+pandas
+requests
+black
+flake8
+pre-commit
